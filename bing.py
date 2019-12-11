@@ -12,7 +12,7 @@ from os import makedirs
 IMAGE_DIR = ''
 # ISO country code
 # eg. 'en-US', 'en-NZ', 'zh-CN' or just leave it
-COUNTRY_CODE = ''
+COUNTRY_CODE = 'en-US'
 
 
 # Apple Script to set wallpaper
@@ -38,7 +38,7 @@ def get_wallpaper_path(file_name):
 
 # Download a image with given URL
 def download_image(url, download_only=False):
-    file_name = url.split('/')[-1]
+    file_name = url.split('/')[-1].split("OHR.")[1].split("&")[0]
     file_path = get_wallpaper_path(file_name)
 
     if isfile(file_path):
