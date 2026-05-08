@@ -6,7 +6,22 @@ Ever since the switch to Mac, I've kinda been missing [PyBingWallpaper](https://
 
 Microsoft provides an API to get the images. This makes things so much easier compared to my initial idea, which was to scrape the webpage. 
 
-PS: This is only a Python script. What you do with it is entirely up to you. I'll probably make a native OS X app for this since I've been learning Swift lately. Meanwhile, you can use **Automator** with `python PATH/bing.py` shell command to create an app that calls this script and configure it to run everytime you login. Click [here](http://stackoverflow.com/questions/6442364/running-script-upon-login-mac) for more details.
+PS: This is only a Python script. What you do with it is entirely up to you.
+
+## Mac/Linux setup
+
+To run the script daily, you can use the following command:
+
+```
+crontab -e
+```
+
+Add the following line at the end of the file:
+
+```
+0 0 * * * python3 /Users/USERNAME/Softwares/Bing-Wallpaper-for-Mac/bing.py
+```
+
 
 ## Usage
 You can modify the Configurations section to set your own image directory and country code. Wallpapers will be saved to **/Users/USERNAME/Pictures/BingWallpaper** by default.
